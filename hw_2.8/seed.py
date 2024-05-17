@@ -21,6 +21,5 @@ def insert_from_json(authors_file, quotes_file):
         tags = Tag(name=(t for t in i['tags']))
         
 
-
 if __name__ == '__main__':
     insert_from_json('authors.json', 'quotes.json')
