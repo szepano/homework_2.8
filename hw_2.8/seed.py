@@ -6,7 +6,7 @@ def insert_from_json(authors_file, quotes_file):
 
     author_dict = {}
 
-    with open(authors_file, 'r') as fh1:
+    with open(authors_file, 'r', encoding='utf-8') as fh1:
         authors = json.load(fh1)
 
     for i in authors:
@@ -18,7 +18,7 @@ def insert_from_json(authors_file, quotes_file):
         author_dict[i['fullname']] = new_auth
         new_auth.save()
     
-    with open(quotes_file, 'r') as fh2:
+    with open(quotes_file, 'r', encoding='utf-8') as fh2:
         quotes = json.load(fh2)
 
     for i in quotes:

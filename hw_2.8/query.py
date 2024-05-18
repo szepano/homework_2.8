@@ -12,7 +12,7 @@ def by_author(author_name):
 
     print(f'Quotes by {author.name}:')
     for i in quotes:
-        print(i.quote)
+        print(i.quote, '\n')
 
 
 def by_tag(tag: list):
@@ -22,13 +22,16 @@ def by_tag(tag: list):
     quote_raw = Quote.objects(tags__name__all=tag)
     if not quote_raw:
         print(f"Couldn't find a quote with given tags: {tag}")
-        return
+        return None
     quotes = [q for q in quote_raw]
+    print(f'Quotes with tags {tag}:')
     for i in quotes:
-        print(i.quote)
+        print(i.quote, '\n')
+
 
 def help():
     print(f"Available commands:\nname: <author name> - see quotes from inserted author (case insensitive)\ntag: <tag1,tag2> - search quotes with ALL given tags (second tag is optional)\nexit - self-explanatory")
+
 
 commands_dict = {
     'help': help,
@@ -48,8 +51,8 @@ def interaction():
         parts = line.split(': ')
         command = parts[0]
         args = [parts[1]]
-        if ',' in args:
-            args = [t for t in args.split(',')]
+        if ',' in args[0]:
+            args = [t for t in args[0].split(',')]
         commands_dict[command](args)
 
 if __name__ == '__main__':
