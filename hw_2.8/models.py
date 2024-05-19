@@ -1,5 +1,5 @@
 from mongoengine import Document, EmbeddedDocument
-from mongoengine.fields import EmbeddedDocumentField, StringField, ListField, ReferenceField
+from mongoengine.fields import EmbeddedDocumentField, StringField, ListField, ReferenceField, BooleanField, EmailField
 from connect import connect
 
 connect(host='mongodb+srv://bartszczepan04:A501796b@firstcluster.dvmoxij.mongodb.net/', ssl=True)
@@ -19,3 +19,8 @@ class Quote(Document):
     quote = StringField(required=True)
     tags = ListField(EmbeddedDocumentField(Tag))
     author = ReferenceField(Author, required=True)
+
+class Contact(Document):
+    name = StringField(required=True)
+    email = EmailField(required=True)
+    sent = BooleanField(default=False)
