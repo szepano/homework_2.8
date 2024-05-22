@@ -2,7 +2,7 @@ import json
 from models import Tag, Author, Quote
 
 
-def insert_from_json(authors_file, quotes_file):
+def insert_from_json(authors_file='authors.json', quotes_file='quotes.json'):
 
     author_dict = {}
 
@@ -31,4 +31,4 @@ def insert_from_json(authors_file, quotes_file):
 
         
 if __name__ == '__main__':
-    insert_from_json('authors.json', 'quotes.json')
+    insert_from_json()

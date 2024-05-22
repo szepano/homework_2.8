@@ -3,7 +3,7 @@ from connect import connect
 from models import Contact
 from faker import Faker
 
-# connect(host=f'mongodb+srv://bartszczepan04:A501796b@firstcluster.dvmoxij.mongodb.net/', ssl=True)
+connect(host=f'mongodb+srv://fragile_data@firstcluster.dvmoxij.mongodb.net/', ssl=True)
 
 creadentials = pika.PlainCredentials('guest', 'guest')
 connection = pika.BlockingConnection(

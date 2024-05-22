@@ -1,7 +1,7 @@
 from connect import connect
 from models import Quote, Author, Tag
 
-connect(host=f'mongodb+srv://bartszczepan04:A501796b@firstcluster.dvmoxij.mongodb.net/', ssl=True)
+connect(host=f'mongodb+srv://fragile_data@firstcluster.dvmoxij.mongodb.net/', ssl=True)
 
 
 def by_author(author_name):

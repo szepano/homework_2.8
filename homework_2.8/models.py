@@ -2,7 +2,7 @@ from mongoengine import Document, EmbeddedDocument
 from mongoengine.fields import EmbeddedDocumentField, StringField, ListField, ReferenceField, BooleanField, EmailField
 from connect import connect
 
-connect(host='mongodb+srv://bartszczepan04:A501796b@firstcluster.dvmoxij.mongodb.net/', ssl=True)
+connect(host='mongodb+srv://fragile_data@firstcluster.dvmoxij.mongodb.net/', ssl=True)
 
 class Tag(EmbeddedDocument):
     name = StringField(required=True)
