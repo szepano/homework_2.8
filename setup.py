@@ -1,6 +1,6 @@
 from setuptools import setup, find_namespace_packages
 
-setup(name='homework_2.8',
+setup(name='homework_2_8',
       version=1,
       description='Inserting records into MongoDB from .json',
       author='Bartosz Szczepan',
