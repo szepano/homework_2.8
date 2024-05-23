@@ -32,4 +32,4 @@ def insert_from_json(authors_file='authors.json', quotes_file='quotes.json'):
         
 if __name__ == '__main__':
     print(sys.path)
-    insert_from_json()
+    insert_from_json(sys.argv[1], sys.argv[2])
