@@ -1,6 +1,6 @@
 import json
-from models import Tag, Author, Quote
-
+from homework_2_8.models import Tag, Author, Quote
+import sys
 
 def insert_from_json(authors_file='authors.json', quotes_file='quotes.json'):
 
@@ -31,4 +31,5 @@ def insert_from_json(authors_file='authors.json', quotes_file='quotes.json'):
 
         
 if __name__ == '__main__':
+    print(sys.path)
     insert_from_json()
